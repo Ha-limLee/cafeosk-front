@@ -6,3 +6,5 @@ const OrderPage: NextPage = () => {
         </>
     );
 }
+
+export default OrderPage;

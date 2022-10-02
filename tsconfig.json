@@ -4,7 +4,7 @@
     "paths": {
       "@/components/*": ["src/components/*"],
       "@/styles/*": ["styles/*"],
-      "@/config/*": ["src/config/*"]
+      "@/settings/*": ["src/settings/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
