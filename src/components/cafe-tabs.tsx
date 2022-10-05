@@ -8,6 +8,7 @@ import CappuccinoIcon from './icons/cappuccino-icon';
 import AmericanoIcon from './icons/americano-icon';
 import EspressoIcon from './icons/espresso-icon';
 import FlatWhiteIcon from './icons/flat-white-icon';
+import MenuList from './menu-list';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -68,19 +69,19 @@ export default function CafeTabs() {
         <Tab icon={ <FlatWhiteIcon /> } label="Flat White" {...a11yProps(4)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        Item One
+        first
       </TabPanel>
       <TabPanel value={value} index={1}>
-        Item Two
+        second
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        thrid
       </TabPanel>
       <TabPanel value={value} index={3}>
-        Item Four
+        fourth
       </TabPanel>
       <TabPanel value={value} index={4}>
-        Item Five
+        fifth
       </TabPanel>
     </Box>
   );
