@@ -4,7 +4,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
-import Image from 'next/image';
+import InfoIcon from '@mui/icons-material/Info';
 
 export default function MenuList() {
   return (
@@ -14,9 +14,9 @@ export default function MenuList() {
       </ImageListItem>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
-            <Image
-                  layout="fill"
+          <img
             src={`${item.img}?w=248&fit=crop&auto=format`}
+            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
             alt={item.title}
             loading="lazy"
           />
@@ -28,6 +28,7 @@ export default function MenuList() {
                 sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
                 aria-label={`info about ${item.title}`}
               >
+                <InfoIcon />
               </IconButton>
             }
           />

@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import LatteIcon from '@/components/icons/latte-icon';
 import CappuccinoIcon from './icons/cappuccino-icon';
@@ -29,7 +28,7 @@ function TabPanel(props: TabPanelProps) {
     >
       {value === index && (
         <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>
@@ -69,19 +68,19 @@ export default function CafeTabs() {
         <Tab icon={ <FlatWhiteIcon /> } label="Flat White" {...a11yProps(4)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        first
+        <MenuList />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        second
+        <MenuList />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        thrid
+        <MenuList />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        fourth
+        <MenuList />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        fifth
+        <MenuList />
       </TabPanel>
     </Box>
   );
