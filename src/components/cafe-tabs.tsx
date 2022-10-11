@@ -68,19 +68,19 @@ export default function CafeTabs() {
         <Tab icon={ <FlatWhiteIcon /> } label="Flat White" {...a11yProps(4)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <MenuList />
+        <MenuList title="Cappuccino"/>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <MenuList />
+        <MenuList title="Latte"/>
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <MenuList />
+        <MenuList title="Americano"/>
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <MenuList />
+        <MenuList title="Espresso"/>
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <MenuList />
+        <MenuList title="Flat White"/>
       </TabPanel>
     </Box>
   );
