@@ -1,26 +1,26 @@
-import * as React from 'react';
-import type { NextPage } from 'next';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
-import CafeTabs from '@/components/cafe-tabs';
+import * as React from "react";
+import type { NextPage } from "next";
+import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
+import CafeTabs from "@/components/cafe-tabs";
 
 const Home: NextPage = () => {
   return (
-    <Container maxWidth="lg">
+    <Container>
       <Box
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-          minHeight: '100vh'
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "50vh",
         }}
       >
         <Box>
           <CafeTabs />
         </Box>
       </Box>
-      </Container>
+    </Container>
   );
 };
 

@@ -9,8 +9,11 @@ import AddIcon from "@mui/icons-material/Add";
 
 export default function MenuList({ title }: { title: string }) {
   return (
-    <ImageList sx={{ width: 500, height: 450 }}>
-      <ImageListItem key="Subheader" cols={2}>
+    <ImageList
+      cols={3}
+      sx={{ width: 500, height: 400, "&::-webkit-scrollbar": { display: "none" } }}
+    >
+      <ImageListItem key="Subheader" cols={3}>
         <ListSubheader component="div">{title}</ListSubheader>
       </ImageListItem>
       {itemData.map((item) => (
@@ -21,7 +24,7 @@ export default function MenuList({ title }: { title: string }) {
               backgroundColor: "rgba(0, 0, 0, 0.3)",
               width: "40px",
               position: "absolute",
-              top: "86px",
+              top: "40px",
               left: "0",
               right: "0",
               margin: "auto",
