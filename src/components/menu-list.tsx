@@ -17,13 +17,18 @@ export default function MenuList({ title }: { title: string }) {
         <ImageListItem key={item.img}>
           <IconButton
             sx={{
-              color: "rgba(255, 255, 255, 1)",
+              color: "rgba(255, 255, 255, 0.8)",
+              backgroundColor: "rgba(0, 0, 0, 0.3)",
+              width: "40px",
               position: "absolute",
               top: "86px",
               left: "0",
               right: "0",
               margin: "auto",
               zIndex: "1",
+              "&:hover": {
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              },
             }}
           >
             <AddIcon />
