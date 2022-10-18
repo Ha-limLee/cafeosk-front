@@ -8,7 +8,6 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
 import Appbar from "./Appbar";
-import OrderDrawer from '@/components/order-drawer';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -39,10 +38,14 @@ const SelectMenu: NextPage = () => {
                 <Item>EXTRA</Item>
 
                 <Item>MILK TYPE</Item>
-                <Item>
-                  <h1>$99</h1>
-                </Item>
-                <Item><OrderDrawer></OrderDrawer></Item>
+                <Item><Grid container spacing={2}>
+  <Grid xs={6}>
+    <Item><h1>$99</h1></Item>
+  </Grid>
+  <Grid xs={6}>
+    <Item>수량</Item>
+  </Grid>
+</Grid></Item>
                 <Item>
                   <Button color="error" variant="contained" size="large">
                     PLACE ORDER

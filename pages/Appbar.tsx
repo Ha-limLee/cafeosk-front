@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
 import RoomServiceIcon from '@mui/icons-material/RoomService';
+import OrderDrawer from '@/components/order-drawer';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -24,7 +25,7 @@ const SelectedPage: NextPage = () => {
           <Item><Button color="inherit"><ArrowBackIcon></ArrowBackIcon>BACK TO MENU</Button></Item>
         </Grid>
         <Grid xs={6}>
-          <Item>xs=4</Item>
+          <Item><OrderDrawer></OrderDrawer></Item>
         </Grid>
         <Grid xs={3}>
           <Item><Button color="inherit"><RoomServiceIcon></RoomServiceIcon>ORDER STATUS</Button></Item>
