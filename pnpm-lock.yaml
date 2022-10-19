@@ -6,7 +6,7 @@ specifiers:
   '@emotion/react': ^11.10.4
   '@emotion/server': ^11.10.0
   '@emotion/styled': ^11
-  '@mui/icons-material': ^5.10.6
+  '@mui/icons-material': ^5.10.9
   '@mui/material': ^5.10.7
   '@types/node': 18.7.23
   '@types/react': 18.0.21
@@ -25,7 +25,7 @@ dependencies:
   '@emotion/react': 11.10.4_bjroym7kxlcs2vvwnej4p3gzwu
   '@emotion/server': 11.10.0
   '@emotion/styled': 11.10.4_ogudqqhlstsi7uge4lir7ff3ty
-  '@mui/icons-material': 5.10.6_z3nvdgs6va3zf6yslsds3tshui
+  '@mui/icons-material': 5.10.9_z3nvdgs6va3zf6yslsds3tshui
   '@mui/material': 5.10.7_ikcgkdnp4bn3rgptamntbhbo7e
   clsx: 1.2.1
   next: 12.3.1_6tziyx3dehkoeijunclpkpolha
@@ -521,8 +521,8 @@ packages:
     resolution: {integrity: sha512-3N0UYVy3MbrHzM3j6f7fIUCZ+bQ1/sSZq143tLxwSssW3Z4AqE83brpr5flEY1Lx+Aowv/cPyQMmZxzRlFCGqw==}
     dev: false
 
-  /@mui/icons-material/5.10.6_z3nvdgs6va3zf6yslsds3tshui:
-    resolution: {integrity: sha512-QwxdRmLA46S94B0hExPDx0td+A2unF+33bQ6Cs+lNpJKVsm1YeHwNdYXYcnpWeHeQQ07055OXl7IB2GKDd0MfA==}
+  /@mui/icons-material/5.10.9_z3nvdgs6va3zf6yslsds3tshui:
+    resolution: {integrity: sha512-sqClXdEM39WKQJOQ0ZCPTptaZgqwibhj2EFV9N0v7BU1PO8y4OcX/a2wIQHn4fNuDjIZktJIBrmU23h7aqlGgg==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       '@mui/material': ^5.0.0

@@ -4,7 +4,7 @@ const OrderPage: NextPage = () => {
     return (
         <>
         </>
-    );
+      );
 }
 
 export default OrderPage;
