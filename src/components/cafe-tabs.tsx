@@ -1,14 +1,13 @@
-import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import LatteIcon from '@/components/icons/latte-icon';
-import CappuccinoIcon from './icons/cappuccino-icon';
-import AmericanoIcon from './icons/americano-icon';
-import EspressoIcon from './icons/espresso-icon';
-import FlatWhiteIcon from './icons/flat-white-icon';
-import MenuList from './menu-list';
+import * as React from "react";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Box from "@mui/material/Box";
+import LatteIcon from "@/components/icons/latte-icon";
+import CappuccinoIcon from "./icons/cappuccino-icon";
+import AmericanoIcon from "./icons/americano-icon";
+import EspressoIcon from "./icons/espresso-icon";
+import FlatWhiteIcon from "./icons/flat-white-icon";
+import MenuList from "./menu-list";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -27,11 +26,7 @@ function TabPanel(props: TabPanelProps) {
       aria-labelledby={`vertical-tab-${index}`}
       {...other}
     >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+      {value === index && <Box sx={{ p: 3 }}>{children}</Box>}
     </div>
   );
 }
@@ -39,7 +34,7 @@ function TabPanel(props: TabPanelProps) {
 function a11yProps(index: number) {
   return {
     id: `vertical-tab-${index}`,
-    'aria-controls': `vertical-tabpanel-${index}`,
+    "aria-controls": `vertical-tabpanel-${index}`,
   };
 }
 
@@ -51,37 +46,35 @@ export default function CafeTabs() {
   };
 
   return (
-    <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex', height: 224 }}
-    >
+    <Box sx={{ flexGrow: 1, bgcolor: "background.paper", display: "flex", height: 224 }}>
       <Tabs
         orientation="vertical"
         variant="scrollable"
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider' }}
+        sx={{ borderRight: 1, borderColor: "divider", marginTop: "100px", height: "300px" }}
       >
-        <Tab icon={ <CappuccinoIcon /> } label="Cappuccino" {...a11yProps(0)} />
-        <Tab icon={ <LatteIcon /> } label="Latte" {...a11yProps(1)} />
-        <Tab icon={ <AmericanoIcon /> } label="Americano" {...a11yProps(2)} />
-        <Tab icon={ <EspressoIcon /> } label="Espresso" {...a11yProps(3)} />
-        <Tab icon={ <FlatWhiteIcon /> } label="Flat White" {...a11yProps(4)} />
+        <Tab icon={<CappuccinoIcon />} label="Cappuccino" {...a11yProps(0)} />
+        <Tab icon={<LatteIcon />} label="Latte" {...a11yProps(1)} />
+        <Tab icon={<AmericanoIcon />} label="Americano" {...a11yProps(2)} />
+        <Tab icon={<EspressoIcon />} label="Espresso" {...a11yProps(3)} />
+        <Tab icon={<FlatWhiteIcon />} label="Flat White" {...a11yProps(4)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        first
+        <MenuList title="Cappuccino" />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        second
+        <MenuList title="Latte" />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        thrid
+        <MenuList title="Americano" />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        fourth
+        <MenuList title="Espresso" />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        fifth
+        <MenuList title="Flat White" />
       </TabPanel>
     </Box>
   );
