@@ -9,6 +9,13 @@ import Grid from "@mui/material/Unstable_Grid2";
 import Stack from "@mui/material/Stack";
 import Appbar from "./Appbar";
 import { Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
+import MobileStepper from "@mui/material/MobileStepper";
+import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -19,6 +26,17 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const SelectMenu: NextPage = () => {
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+  const maxSteps = 50;
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
   return (
     <>
       <Appbar></Appbar>
@@ -41,23 +59,41 @@ const SelectMenu: NextPage = () => {
               <Typography>SIZE</Typography>
               <Typography>EXTRA</Typography>
               <Typography>MILK TYPE</Typography>
-              <Item>
+              
                 <Grid container spacing={2}>
                   <Grid xs={6}>
-                    <Item>
                       <h1>$99</h1>
-                    </Item>
-                  </Grid>
+                </Grid>
+                {/* 수량 */}
                   <Grid xs={6}>
-                    <Item>수량</Item>
+                      <Box sx={{ maxWidth: 400, flexGrow: 1, border:2, borderRadius: 1 }}>
+                        <MobileStepper
+                          variant="text"
+                          steps={maxSteps}
+                          position="static"
+                          activeStep={activeStep}
+                          nextButton={
+                            <Button
+                              size="small"
+                              onClick={handleNext}
+                              disabled={activeStep === maxSteps - 1}
+                            >
+                              <AddIcon></AddIcon>
+                            </Button>
+                          }
+                          backButton={
+                            <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                              <RemoveIcon></RemoveIcon>
+                            </Button>
+                          }
+                        />
+                      </Box>
                   </Grid>
                 </Grid>
-              </Item>
-              <Item>
+              
                 <Button color="error" variant="contained" size="large">
                   PLACE ORDER
                 </Button>
-              </Item>
             </Stack>
           </Grid>
         </Grid>

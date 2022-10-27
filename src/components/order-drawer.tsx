@@ -18,27 +18,19 @@ type Anchor = "right";
 const steps = [
   {
     label: "Ordered",
-    description: `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`,
+    description: `주문한 음료`,
   },
   {
     label: "Preparing",
-    description: "An ad group contains one or more ads which target a shared set of keywords.",
+    description: "주문받고 준비중인 음료",
   },
   {
     label: "Finishing",
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    description: `다 만들어진 음료 (픽업대에 있음~!)`,
   },
   {
     label: "Served",
-    description: `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`,
+    description: `고객이 가져간 음료`,
   },
 ];
 
@@ -125,31 +117,35 @@ const drawer: NextPage = () => {
           </Button>
         </Paper>
       )}
-
-      <Grid container spacing={2} columns={16} sx={{mt:5}}>
-        <Grid item xs={8}>
-<Typography>Subtotal</Typography>
+      {/* receipt */}
+      <>
+        <Grid container spacing={2} columns={16} sx={{ mt: 5 }}>
+          <Grid item xs={8}>
+            <Typography>Subtotal</Typography>
+          </Grid>
+          <Grid item xs={8}>
+            <Typography align="right">$456.90</Typography>
+          </Grid>
         </Grid>
-        <Grid item xs={8}>
-          <Typography>$456.90</Typography>
+        <Grid container spacing={2} columns={16}>
+          <Grid item xs={8}>
+            <Typography>Discount -10%</Typography>
+          </Grid>
+          <Grid item xs={8}>
+            <Typography align="right">$45.69</Typography>
+          </Grid>
         </Grid>
-      </Grid>
-      <Grid container spacing={2} columns={16}>
-        <Grid item xs={8}>
-          <Typography>Discount -10%</Typography>
+        <Grid container spacing={2} columns={16}>
+          <Grid item xs={8}>
+            <Typography fontWeight="bold">Total</Typography>
+          </Grid>
+          <Grid item xs={8}>
+            <Typography align="right" fontWeight="bold">
+              $411.21
+            </Typography>
+          </Grid>
         </Grid>
-        <Grid item xs={8}>
-          <Typography>$45.69</Typography>
-        </Grid>
-      </Grid>
-      <Grid container spacing={2} columns={16}>
-        <Grid item xs={8}>
-<h2>Total</h2>
-        </Grid>
-        <Grid item xs={8}>
-          <h2>$411.21</h2>
-        </Grid>
-      </Grid>
+      </>
     </Box>
   );
 
