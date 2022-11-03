@@ -13,14 +13,16 @@ type CafeMenu = {
   name: string;
   price: number;
   categoryName: string;
+  img: string;
 };
 
-export default function MenuList({ title }: { title: string }) {
+export default function MenuList({ id, title }: { id: string; title: string }) {
   const [itemData, setItemData] = React.useState<CafeMenu[]>([]);
+
   React.useEffect(() => {
-    fetch("mock/data.json")
+    fetch(`${process.env.NEXT_PUBLIC_API_SERVER}/menu/${id}`)
       .then((x) => x.json())
-      .then(setItemData);
+      .then((x) => setItemData(x[id]));
   }, []);
 
   return itemData.length == 0 ? (
@@ -53,12 +55,7 @@ export default function MenuList({ title }: { title: string }) {
           >
             <AddIcon />
           </IconButton>
-          <img
-            src={`images/menus/${item.id}.jpg`}
-            srcSet={`images/menus/${item.id}.jpg`}
-            alt={item.name}
-            loading="lazy"
-          />
+          <img src={`${item.img}`} srcSet={`${item.img}`} alt={item.name} loading="lazy" />
           <ImageListItemBar
             title={item.name}
             subtitle={item.price}

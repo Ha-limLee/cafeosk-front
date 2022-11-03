@@ -55,26 +55,30 @@ export default function CafeTabs() {
         aria-label="Vertical tabs example"
         sx={{ borderRight: 1, borderColor: "divider", marginTop: "100px", height: "300px" }}
       >
-        <Tab icon={<CappuccinoIcon />} label="Cappuccino" {...a11yProps(0)} />
-        <Tab icon={<LatteIcon />} label="Latte" {...a11yProps(1)} />
-        <Tab icon={<AmericanoIcon />} label="Americano" {...a11yProps(2)} />
+        <Tab icon={<CappuccinoIcon />} label="Blended" {...a11yProps(0)} />
+        <Tab icon={<LatteIcon />} label="Cold Brew" {...a11yProps(1)} />
+        <Tab icon={<AmericanoIcon />} label="Drink" {...a11yProps(2)} />
         <Tab icon={<EspressoIcon />} label="Espresso" {...a11yProps(3)} />
-        <Tab icon={<FlatWhiteIcon />} label="Flat White" {...a11yProps(4)} />
+        <Tab icon={<FlatWhiteIcon />} label="Frappuccino" {...a11yProps(4)} />
+        <Tab icon={<FlatWhiteIcon />} label="Tea" {...a11yProps(5)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <MenuList title="Cappuccino" />
+        <MenuList title="Blended" id="blended" />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <MenuList title="Latte" />
+        <MenuList title="Cold Brew" id="cold-brew" />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <MenuList title="Americano" />
+        <MenuList title="Drink" id="drink" />
       </TabPanel>
       <TabPanel value={value} index={3}>
-        <MenuList title="Espresso" />
+        <MenuList title="Espresso" id="espresso" />
       </TabPanel>
       <TabPanel value={value} index={4}>
-        <MenuList title="Flat White" />
+        <MenuList title="Frappuccino" id="frappuccino" />
+      </TabPanel>
+      <TabPanel value={value} index={5}>
+        <MenuList title="Tea" id="tea" />
       </TabPanel>
     </Box>
   );

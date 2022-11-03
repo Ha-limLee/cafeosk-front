@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import CafeTabs from "@/components/cafe-tabs";
 
 const Home: NextPage = () => {
+  console.log(process.env.NEXT_PUBLIC_API_SERVER);
   return (
     <Container>
       <Box
