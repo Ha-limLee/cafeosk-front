@@ -6,7 +6,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Unstable_Grid2";
 import RoomServiceIcon from "@mui/icons-material/RoomService";
-import OrderDrawer from "@/components/order-drawer";
+import OrderDrawer from "@/components/menu-drawer";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",

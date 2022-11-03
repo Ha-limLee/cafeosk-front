@@ -1,5 +1,4 @@
 import * as React from "react";
-import type { NextPage } from "next";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import Button from "@mui/material/Button";
@@ -15,7 +14,7 @@ import RoomServiceIcon from "@mui/icons-material/RoomService";
 
 type Anchor = "right";
 
-const drawer: NextPage = () => {
+const MenuDrawer = () => {
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -83,4 +82,4 @@ const drawer: NextPage = () => {
   );
 };
 
-export default drawer;
+export default MenuDrawer;
